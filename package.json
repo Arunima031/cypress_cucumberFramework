@@ -1,0 +1,33 @@
+{
+  "name": "cypress_framework",
+  "version": "1.0.0",
+  "description": "cucumber framework ",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run",
+    "test:chrome": "npx cypress run --browser chrome",
+    "test:smoke": "npx cypress run --env \"TAGS=@Smoke\" --browser chrome",
+    "test:sanity": "npx cypress run --env \"TAGS=@Sanity\" --browser chrome",
+    "open": "npx cypress open",
+    "allure:final": "npx allure generate allure-results -o allure-report --clean && allure open",
+    "runWithReport": " npm run test:smoke && npm run allure:final"
+  },
+  "author": "Arunima",
+  "license": "ISC",
+  "devDependencies": {
+    "allure-commandline": "^2.32.0",
+    "allure-cypress": "^3.0.9",
+    "cypress": "^13.17.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-xpath": "^2.0.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "cypress/e2e/common/**/*.{js,ts}"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^21.0.3",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4",
+    "@esbuild-plugins/node-modules-polyfill": "^0.2.2"
+  }
+}
