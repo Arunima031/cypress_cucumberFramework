@@ -7,5 +7,5 @@ var url= new Utility().getUrl();
 
 
 beforeEach(() => {
-    cy.visit(url); // Common setup for all tests
+    // cy.visit(url); // Common setup for all tests
   });
