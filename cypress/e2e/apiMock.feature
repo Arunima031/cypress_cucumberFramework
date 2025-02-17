@@ -14,6 +14,5 @@ Then @mockApi I validate the application for response
 Scenario:Mocking an api for request
 
 Given @mockApi I mock API request
-Then @mockApi I validate the application for request Mocking
 
 

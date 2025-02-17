@@ -24,6 +24,3 @@ Given('@mockApi I mock API request',()=>{
     mockAPIPage.visitAnotherSite();
     mockAPIPage.mockRequest();
 });
-Then('@mockApi I validate the application for request Mocking',()=>{
-
-});
